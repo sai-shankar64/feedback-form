@@ -1,0 +1,7 @@
+<!-- <div *ngFor="let section of sections"> -->
+<div>
+    <h3>{{section.name}}</h3>
+    <app-question *ngFor="let question of section.questions" [question]="question">
+        
+    </app-question>
+</div>

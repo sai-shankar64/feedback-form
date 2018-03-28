@@ -1,0 +1,4 @@
+<div>
+  <h4>{{question.text}}</h4>
+  <app-choice *ngFor="let choice of question.choices" [choice]="choice" [type]="question.type"></app-choice>
+</div>

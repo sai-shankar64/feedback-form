@@ -1,0 +1,7 @@
+
+<header>
+  <h1>Form Name : {{form.name}}</h1>
+  <h2>Createdby : {{form.createdby}}</h2>
+  <app-section *ngFor="let section of form.sections" [section]="section">
+  </app-section>
+</header>
