@@ -8,19 +8,19 @@ import { Question } from '../../models/question';
   styleUrls: ['./designsection.component.scss']
 })
 export class DesignsectionComponent implements OnInit {
-  @Input() section:Section;
-  constructor() { 
-    this.section=new Section();
-    
+  @Input() section: Section;
+  constructor() {
+    this.section = new Section();
   }
 
   ngOnInit() {
-    this.section.questions=[];
-    this.section.name="hello section";
+    this.section.name = "New Section";
+    this.section.questions = [];
   }
-  question(){
-    
+  question() {
     this.section.questions.push(new Question());
   }
-
+  onKey(event: any) {
+    this.section.name = event.target.value;
+  }
 }

@@ -1,9 +1,12 @@
 <mat-expansion-panel>
   <mat-expansion-panel-header>
-    choice1
-    </mat-expansion-panel-header>
+    {{choice.text}}
+  </mat-expansion-panel-header>
   <mat-form-field class="fullwidth">
-    <input matInput placeholder="Type Choice">
+    <input (Keyup)="onKey($event)" matInput placeholder="Type Choice">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Score">
   </mat-form-field>
 
 </mat-expansion-panel>

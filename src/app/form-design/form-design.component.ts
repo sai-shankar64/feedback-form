@@ -19,4 +19,5 @@ export class FormDesignComponent implements OnInit {
     
     this.form.sections.push(new Section());
   }
+
 }

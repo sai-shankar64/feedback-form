@@ -12,6 +12,9 @@ export class DesignchoiceComponent implements OnInit {
     this.choice = new Choice();
   }
   ngOnInit() {
+    this.choice.text = "New Choice";
   }
-
+  onKey(event: any) {
+    this.choice.text = event.target.value;
+  }
 }

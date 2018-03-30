@@ -1,16 +1,21 @@
 <mat-expansion-panel>
   <mat-expansion-panel-header>
-      Question1
+    {{question.name}}
   </mat-expansion-panel-header>
+  <mat-form-field>
+    <input matInput (keyup)="onKey($event)" placeholder="Question Name">
+  </mat-form-field>
   <mat-form-field class="fullwidth">
-    <input matInput placeholder="Type Question">
+    <input matInput placeholder="Question">
   </mat-form-field>
   <mat-form-field>
-    <mat-select [(value)]="Selected">
+    <mat-select placeholder="Select">
       <mat-option value="Checkbox">Checkbox
       </mat-option>
       <mat-option value="Choicebox">Choicebox
       </mat-option>
+      <mat-option value="TextArea">Choicebox
+        </mat-option>
     </mat-select>
   </mat-form-field>
   <div>
@@ -18,9 +23,9 @@
   </div>
   <mat-card>
     <mat-accordion>
-    <app-designchoice *ngFor="let choice of question.choices">
+      <app-designchoice *ngFor="let choice of question.choices">
 
-    </app-designchoice>
+      </app-designchoice>
     </mat-accordion>
   </mat-card>
 

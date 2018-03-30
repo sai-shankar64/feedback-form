@@ -11,15 +11,16 @@ export class DesignquestionComponent implements OnInit {
   @Input() question: Question;
   constructor() {
     this.question = new Question();
-    
   }
 
   ngOnInit() {
+    this.question.name = "New Question";
     this.question.choices = [];
   }
   choice() {
-    
     this.question.choices.push(new Choice());
-    console.log(this.question.choices);
+  }
+  onKey(event: any) {
+    this.question.name = event.target.value;
   }
 }
