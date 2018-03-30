@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Section } from '../models/section';
+import { Form } from '../models/form';
 
 @Component({
   selector: 'app-form-design',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-design.component.scss']
 })
 export class FormDesignComponent implements OnInit {
-
-  constructor() { }
-
+  form:Form;
+  constructor() {
+    this.form=new Form();
+   }
   ngOnInit() {
+    this.form.sections=[];
   }
-
+  section(){
+    
+    this.form.sections.push(new Section());
+  }
 }

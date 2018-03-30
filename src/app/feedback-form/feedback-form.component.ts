@@ -19,4 +19,12 @@ export class FeedbackFormComponent implements OnInit {
     }
     );
   }
+  fun(){
+    console.log("helloowr old");
+  }
 }
+
+
+/**
+ * @title Basic grid-list
+ */

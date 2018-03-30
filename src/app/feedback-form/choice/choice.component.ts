@@ -13,7 +13,5 @@ export class ChoiceComponent implements OnInit {
     this.choice=new Choice();
    }
   ngOnInit() {
-    console.log("choice");
-    console.log("type is ",this.type);
   }
 }

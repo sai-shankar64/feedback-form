@@ -12,6 +12,5 @@ export class QuestionComponent implements OnInit {
     this.question = new Question();
    }
   ngOnInit() {
-    console.log("question");
   }
 }

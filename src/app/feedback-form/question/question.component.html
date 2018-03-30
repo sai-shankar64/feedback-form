@@ -1,4 +1,16 @@
-<div>
-  <h4>{{question.text}}</h4>
-  <app-choice *ngFor="let choice of question.choices" [choice]="choice" [type]="question.type"></app-choice>
-</div>
+<mat-card class="question">
+    <mat-card-header>
+        <h4>{{question.text}}</h4>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngIf="question.type === 'radio' ">
+            <!-- <mat-radio-group> -->
+                <app-choice *ngFor="let choice of question.choices" [choice]="choice" [type]="question.type"></app-choice>
+            <!-- </mat-radio-group> -->
+        </div>
+        <div *ngIf="question.type === 'checkbox' ">
+            <app-choice *ngFor="let choice of question.choices" [choice]="choice" [type]="question.type"></app-choice>
+        </div>
+
+    </mat-card-content>
+</mat-card>

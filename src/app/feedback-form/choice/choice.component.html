@@ -1,4 +1,11 @@
-<p>
-  <input type="{{type}}" name="type">
-  {{choice.text}}
-</p>
+<div>
+  <div *ngIf="type === 'checkbox' ">
+    <mat-checkbox>{{choice.text}}</mat-checkbox>
+  </div>
+  <div *ngIf="type === 'radio'">
+    <mat-radio-button >{{choice.text}}</mat-radio-button>
+    <!-- <input type="{{type}}" name="type">
+      {{choice.text}} -->
+    </div>
+</div>
+
